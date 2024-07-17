@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Base de Datos NoSQL</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class='dashboard'>
+        <div class="dashboard-nav">
+            <header><a href="#!" class="menu-toggle"><i class="fas fa-bars"></i></a><a href="#" class="brand-logo text-decoration-none"><i class="fa-solid fa-database"></i> <span>BD NoSQL</span></a></header>
+            <nav class="dashboard-nav-list">
+                <a href="../index.html" class="dashboard-nav-item active text-decoration-none fw-bold"><i class="fas fa-home"></i> Home </a>
+                <a href="documentales.html" class="dashboard-nav-item text-decoration-none fw-bold"><i class="fa-solid fa-file-invoice"></i>Documentales</a>
+                <a href="clave.html" class="dashboard-nav-item text-decoration-none fw-bold"><i class="fa-solid fa-clone"></i>Clave-Valor</a>
+                <a href="#" class="dashboard-nav-item text-decoration-none fw-bold"><i class="fa-solid fa-table-list"></i>Columnas</a>
+                <a href="grafos.html" class="dashboard-nav-item text-decoration-none fw-bold"><i class="fa-solid fa-diagram-project"></i>Grafos</a>
+            </nav>
+        </div>
+        <div class='dashboard-app'>
+            <header class='dashboard-toolbar'><a href="#!" class="menu-toggle text-decoration-none"><i class="fas fa-bars"></i></a></header>
+            <div class='dashboard-content'>
+                        <div class='card-header'>
+                            <h1 class="fw-bold">Cassandra</h1>
+                        </div>
+                        <div class='card-body'>
+                            <div class="row">
+                                <div class="col-md-6 text-center">
+                                    <h3 class="fw-bold">Concepto</h3>
+                                    <p>Apache Cassandra es una base de datos NoSQL que usa tablas, filas y columnas, pero el nombre y el formato de las columnas puede variar en cada fila de una misma tabla (algo que no ocurre en bases de datos relacionales). Esta particularidad también se puede llamar almacenamiento con clave-valor de dos dimensiones.<br> <br>
+                                        Es una solución open source distribuida, diseñada para almacenar grandes cantidades de datos proporcionando una alta disponibilidad sin un único punto de fallo. Es posible desplegarla en la nube, on premise o en un entorno híbrido.<br><br>
+                                        Apache Cassandra fue diseñada originalmente para realizar búsquedas en Facebook y hoy en día se encuentra en uso por muchas organizaciones. Es una base de datos preparada para gestionar datos variables pero semi-estructurados, como sensores o aplicaciones conectadas y realizar análisis, monitorización y logging de eventos cuando es necesaria una alta velocidad de escritura.
+                                    </p>
+                                </div>
+                                <div class="col-md-6 text-center mt-5">
+                                    <img src="../img/cassandra.jpg" width="500" height="400">
+                                </div>
+                            </div>
+
+
+                            <h3 class="fw-bold mt-3 text-center">Características</h3>
+                            <h6 class="fw-bold text-center mt-2">Facilidad de escalado</h6>
+                            <p class="text-center">Cassandra es altamente escalable permitiendo con facilidad más recursos.</p>
+
+                            <h6 class="fw-bold text-center mt-2">Tolerancia a fallos</h6>
+                            <p class="text-center">Cassandra es tolerante a fallos, cada nodo funciona de manera independiente, si uno se cae se sigue dando servicio con el resto.</p>
+
+                            <h6 class="fw-bold text-center mt-2">Almacenamiento flexible</h6>
+                            <p class="text-center">Se permite el almacenaje de estructuras flexibles, por ejemplo, no todos los registros deben tener el mismo número de columnas.</p>
+
+                            <h6 class="fw-bold text-center mt-2">Soporta ACID</h6>
+                            <p class="text-center"> Atomicity, Consistency, Isolation, y Durability. <br>
+                                Escrituras rápidas.<br>
+                            </p>
+
+                            <h6 class="fw-bold text-center mt-2">No tiene punto único de fallo</h6>
+                            <p class="text-center">No tiene un único punto de fallo al trabajar con nodos independientes.<br>
+                                La información puede ser particionada entre varios nodos.<br>
+                                Los datos tienen un tiempo de vida, por lo que no es necesario borrar de la base de datos.<br>
+                            </p>
+
+                            <h6 class="fw-bold text-center mt-2">Lenguaje de queries propio</h6>
+                            <p class="text-center">Cassandra Query Languaje (CQL), se puede utilizar cqlsh por línea de comando para interactuar con la base de datos.</p>
+
+
+                            <h3 class="fw-bold mt-4 text-center">Funcionamiento</h3>
+                            <p class="text-center">El objetivo principal de Cassandra es poder gestionar una gran carga de datos através de multiples nodos. Cassandra replica y distribuye la información desde el primer instante através de todos sus nodos.<br>
+                                Todos los nodos en el cluster tienen el mismo papel, y para ofrecer la replicación desde el principio necesitan que todos los nodos se encuentren conectados entre si. En el caso en el que un nodo se caíga o falle, otro nodo funcionará en su lugar, por eso cada nodo tiene que funcionar de manera totalmente independiente.<br>
+                                En un cluster de Cassandra, varios nodos pueden actuar como replicas, y si se detecta que alguno de estos nodos responde con información desactualizada, se buscará la información más actualizada para devolverla. Una vez se ha devuelto la información, se actualizará el valor del nodo para que tenga la información completamente actualizada.<br>
+                                Para que los nodos se comuniquen uno con otro y se puedan detectar puntos de fallo, se utiliza el protocolo gossip (Cuando hablamos de Gossip Protocol, hablamos de un protocolo de comunicación que utilizan los dispositivos digitales para propagar una información en una red entre pares (P2P). En las redes blockchains, este protocolo es utilizado por los nodos de la red para compartir y divulgar información de forma rápida y confiable entre sí.
+                                El nombre de Gossip para este protocolo deriva de la forma en que se propaga la información a través de las redes sociales. Gossip en español quiere decir chisme o rumor; por lo que el protocolo Gossip Protocol está inspirado en esta forma de divulgación de información que ocurre de manera muy rápida y veloz en estas redes).<br>
+                            </p>
+                            <h4 class="text-center fw-bold">Componentes de Cassandra</h4>
+                            <h6 class="fw-bold text-center mt-2">Nodo</h6>
+                            <p class="text-center">Componente básicos de cualquier instalación, es el lugar en el que la información es guardada.</p> 
+
+                            <h6 class="fw-bold text-center mt-2">Data Center</h6>
+                            <p class="text-center">Es una colección o grupos de nodos.</p> 
+
+                            <h6 class="fw-bold text-center mt-2">Cluster</h6>
+                            <p class="text-center"> Es una colección de data centers.</p>
+
+                            <h6 class="fw-bold text-center mt-2">Commit log</h6>
+                            <p class="text-center">Al igual que otras bases de datos, Cassandra tiene un mecanismo de recuperación, para ello escribe todas las operaciones que realiza en un log.</p> 
+
+                            <h6 class="fw-bold text-center mt-2">Mem table</h6>
+                            <p class="text-center">Este componente es una estructura en memoria, por el cual se escribe la información después de hacer el commit log.</p> 
+
+                            <h6 class="fw-bold text-center mt-2">SSTable</h6>
+                            <p class="text-center">Se escribe la información desde la tabla a disco.</p> 
+
+                            <h6 class="fw-bold text-center mt-2">Bloom Filter</h6>
+                            <p class="text-center">Es una esctructura que es usada para conocer si un elemento esta presente en la base de datos. Es un algoritmo que se podría decir que es una especie de cache, es extremadamente rápido.</p> 
+
+                            <p class="text-center">1. El usuario realiza una petición de escritura, esta se envía al Memtable que almacena la escritura de cada familia de columna de forma temporal en la memoria ram.<br>
+                                2. Posteriormente se realizará la escritura en cada nodo, el commit log almacena la actividad e información de escritura para garantizar la durabilidad de los datos. El commit log se encuentra en disco.<br>
+                                3. Flush de la MemTable sucede cuando el MemTable se quede sin espacio, se elimina los datos, liberando así la memoria.<br>
+                                4. Los datos que han sido eliminados en la fase de Flush de la MemTable se escriben en disco, en ficheros llamados SSTables, los cuales son inmutables y no se vuelve a escribir en ellos después de volcar los datos.<br>
+                                5. Una vez que ya esté todo escrito en las SSTables, de forma periódica Cassandra trata de reducir el espacio de las SSTables, eliminando aquellas SSTables que se han quedado obsoletas por que han sido escritas con datos actualizados, pero este dato actualizado lo escribirá en otra SSTable y no en la misma ya que son inmutables. Este proceso de eliminación de ficheros SSTable se denomina compactación.<br>
+                                Hay que tener en cuenta que las escrituras con “costosas” o “caras” en el momento en el que la información se escribe en las SSTables, pero si está en memoria en el Memtable su escritura y acceso es más rápida y menos costosa ya que inicialmente se escribe en memoria. Si es posible reescribir en filas, ya que cuando se realiza una escritura, Cassandra no realiza la búsqueda si existe o no el dato en el momento de la escritura. <br>
+                                Los datos pueden tener una fecha de caducidad (denominado LLTS) a partir de la cual son marcados por Cassandra como eliminados, esto como un recurso auxiliar a la compactación.<br><br>
+                                El proceso de lectura se realiza de diferentes formas dependiendo de la localización de la información:<br>
+                                Si los datos se encuentran en la MemTable, se procede a la recuperación de ese dato de forma rápida, eficaz y se envía.<br>
+                                Pero si el dato no se encuentra en la MemTable, procederá a acceder a las SSTable para encontrar esa información.<br>
+                                Dentro de estas dos formas de obtener la información, existen 3 tipos de lecturas en Cassandra, siendo las siguientes:<br>
+                                Direct read request: el nodo coordinador contacta con un nodo que contenga la réplica requerida.<br>
+                                Digest request: contacta con tantos nodos con réplicas como se determine en el nivel de consistencia. Se comprueba la consistencia de los datos retornados por el nodo contactado en el Direct read request.<br>
+                                Background read repair request: en el caso de existir inconsistencias en las réplicas, las réplicas con un timestamp más antigua son sobrescritas con los datos de la réplica “más actual”.<br>
+                                En Cassandra, los datos son administrados por el clúster se representan como un espacio circular o anillo. El anillo está dividido en rangos iguales al número de nodos, y cada nodo es responsable de uno o más rangos de los datos. Antes de que un nodo pueda unirse al anillo, se le debe asignar un token. El token determina la posición del nodo en el anillo y el rango de datos del que es responsable. Los datos de la familia de columnas se dividen en los nodos según la clave de fila. Para determinar el nodo donde se encuentra la primera réplica de una fila el anillo se camina en sentido horario hasta que localice el nodo con un valor de token mayor que el de la tecla de fila. Cada nodo es responsable de la región del anillo entre sí (incluido) y su predecesor (exclusivo). Con el nodo ordenado en orden de token, el último nodo se considera el predecesor del primer nodo; De ahí la representación del anillo.<br>
+                                En las implementaciones de centros de datos múltiples, la ubicación de la réplica es calculada por centro de datos. Mediante la Estrategia de colocación de réplica de NetworkTopologyStrategy. En cada centro de datos (o grupo de replicación), la primera réplica para una fila particular está determinada por el valor del token asignado a un nodo. Las réplicas adicionales en el mismo centro de datos se colocan en sentido horario en los nodos hasta que llegar al primer nodo en otro estante. Si no calcula los tokens de partición para que los rangos de datos se distribuyan uniformemente para cada centro de datos, podría terminar con una distribución desigual de datos dentro de un centro de datos. El objetivo es garantizar que los nodos para cada centro de datos tengan asignaciones de tokens que dividan uniformemente el rango general.<br>
+                            </p>
+
+
+                            <h3 class="fw-bold mt-4 text-center">Desventajas</h3>
+                            <p class="text-center">La conexión de nuevos nodos no es tarea fácil, ya que el mismo se tiene que poner de acuerdo con el resto, y esto conlleva un tiempo.<br>
+                                Debemos saber qué queries se van a ejecutar previamente, ya que al hacer SELECT sufre un poco debido a la manera en la que almacena los datos.<br>
+                            </p>
+
+                            <h6 class="fw-bold text-center">Alto costo de mantenimiento</h6>
+                            <p class="text-center">El alto costo de mantenimiento es una desventaja importante para el uso de Cassandra, un sistema de base de datos distribuida desarrollado por Apache. Esta característica puede ser una barrera para aquellos que quieran usar esta herramienta, ya que requiere una inversión considerable en el tiempo para llevar a cabo el mantenimiento y asegurar el funcionamiento óptimo. Esto significa que los usuarios deben tener en cuenta el costo monetario y temporal del mantenimiento de Cassandra antes de decidir implementarlo.</p>
+
+                            <h6 class="fw-bold text-center">Rendimiento limitado</h6>
+                            <p class="text-center">Cassandra presenta una desventaja importante en cuanto a rendimiento limitado, ya que no ofrece soporte para transacciones complejas ni para consultas avanzadas. Esto significa que los usuarios tienen limitaciones en cuanto a la cantidad de datos que pueden recuperar de la base de datos en una sola consulta. Además, la arquitectura de Cassandra tiene una escalabilidad vertical limitada, lo que significa que los usuarios no pueden aprovechar el aumento del rendimiento de la base de datos al añadir nuevos servidores. Estas limitaciones pueden ser un problema para aquellas aplicaciones que requieren un alto rendimiento y escalabilidad.</p>
+
+                            <h6 class="fw-bold text-center">Baja escalabilidad</h6>
+                            <p class="text-center">La escalabilidad es una característica importante asociada con el diseño de bases de datos. Cassandra, un sistema de base de datos distribuido, tiene una desventaja significativa en términos de escalabilidad. Esto se debe a su naturaleza de almacenamiento de clave-valor, lo que significa que los datos se almacenan en forma de pares clave-valor y no se pueden consultar a través de una consulta SQL. Por lo tanto, se hace difícil escalar el sistema a medida que el volumen de datos aumenta. Esto significa que Cassandra no es adecuado para grandes conjuntos de datos y puede ser más apropiado para aplicaciones de menor escala.</p>
+
+                            <h6 class="fw-bold text-center">Falta de herramientas de administración</h6>
+                            <p class="text-center">La falta de herramientas de administración es una de las principales desventajas de usar Cassandra. Esto significa que hay una cantidad limitada de herramientas para configurar y administrar bases de datos Cassandra. Esto hace que sea difícil realizar tareas como la replicación, la compresión de datos y la monitorización de rendimiento. Estas tareas son esenciales para el correcto funcionamiento de cualquier plataforma de gestión de datos. La falta de herramientas apropiadas dificulta la escalabilidad de la base de datos, lo que limita su uso a proyectos de menor escala.</p>
+
+                            <h6 class="fw-bold text-center">No soporta transacciones complejas</h6>
+                            <p class="text-center">Las desventajas de Cassandra son que no soporta transacciones complejas. Esto significa que no se pueden ejecutar consultas que involucren varias tablas, lo que puede limitar su uso para ejecutar procesos más complejos. Además, no se pueden realizar operaciones como actualizar o eliminar datos en varias tablas al mismo tiempo. Esto significa que Cassandra no es una buena solución para proyectos que requieran una manipulación de datos avanzada.</p>
+
+
+                            <h3 class="fw-bold mt-3 text-center">Página Oficial de Documentación</h3>
+                            <div class="text-center"><img src="../img/paginaoficialcassandra.png" width="600" height="300"></div>
+                            <a href="https://cassandra.apache.org/_/index.html">Ir a la pagina oficial de Cassandra</a>
+                        </div>
+                    </div>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
+
+
+
+

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Base de Datos NoSQL</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class='dashboard'>
+        <div class="dashboard-nav">
+            <header><a href="#!" class="menu-toggle"><i class="fas fa-bars"></i></a><a href="#" class="brand-logo text-decoration-none"><i class="fa-solid fa-database"></i> <span>BD NoSQL</span></a></header>
+            <nav class="dashboard-nav-list">
+                <a href="../index.html" class="dashboard-nav-item active text-decoration-none fw-bold"><i class="fas fa-home"></i> Home </a>
+                <a href="documentales.html" class="dashboard-nav-item text-decoration-none fw-bold"><i class="fa-solid fa-file-invoice"></i>Documentales</a>
+                <a href="#" class="dashboard-nav-item text-decoration-none fw-bold"><i class="fa-solid fa-clone"></i>Clave-Valor</a>
+                <a href="colum.html" class="dashboard-nav-item text-decoration-none fw-bold"><i class="fa-solid fa-table-list"></i>Columnas</a>
+                <a href="grafos.html" class="dashboard-nav-item text-decoration-none fw-bold"><i class="fa-solid fa-diagram-project"></i>Grafos</a>
+            </nav>
+        </div>
+        <div class='dashboard-app'>
+            <header class='dashboard-toolbar'><a href="#!" class="menu-toggle text-decoration-none"><i class="fas fa-bars"></i></a></header>
+            <div class='dashboard-content'>
+                        <div class='card-header'>
+                            <h1 class="fw-bold">Redis</h1>
+                        </div>
+                        <div class='card-body'>
+                            <div class="row">
+                                <div class="col-md-6 text-center">
+                                    <h3 class="fw-bold">Concepto</h3>
+                                    <p>Redis es un almacén de estructura de datos de valores de clave en memoria rápido y de código abierto. Redis incorpora un conjunto de estructuras de datos en memoria versátiles que le permiten crear con facilidad diversas aplicaciones personalizadas. Entre los casos de uso principales de Redis se encuentran el almacenamiento en caché, la administración de sesiones, pub/sub y las clasificaciones. Es el almacén de valores de clave más popular en la actualidad. Tiene licencia BSD, está escrito en código C optimizado y admite numerosos lenguajes de desarrollo. Redis es el acrónico de REmote DIctionary Server (servidor de diccionario remoto).<br><br>
+                                        Gracias a su velocidad y facilidad de uso, Redis es una opción popular para aplicaciones web, móviles, de juegos, de tecnología publicitaria y de IoT que requieren el mejor desempeño de su clase. AWS proporciona compatibilidad con Redis mediante un servicio de base de datos totalmente gestionado y optimizado llamado Amazon ElastiCache para Redis, y además permite a los clientes ejecutar Redis en AWS EC2 administrado por ellos mismos.
+                                    </p>
+                                </div>
+                                <div class="col-md-6 text-center mt-5">
+                                    <img src="../img/redis2.jpg" width="500" height="400">
+                                </div>
+                            </div>
+
+
+                            <h3 class="fw-bold mt-3 text-center">Características</h3>
+                            <h6 class="fw-bold text-center mt-2">Desempeño rápido</h6>
+                            <p class="text-center">Todos los datos de Redis se encuentran en la memoria principal del servidor, a diferencia de la mayoría de sistemas de administración de bases de datos, que almacenan los datos en el disco o en SSD. Al eliminar la necesidad de acceder a discos, las bases de datos en memoria como Redis evitan los retrasos y pueden acceder a los datos con algoritmos más sencillos que utilizan menos instrucciones de la CPU. Las operaciones típicas tardan menos de un milisegundo en ejecutarse.</p>
+
+                            <h6 class="fw-bold text-center mt-2">Estructura de datos en memoria</h6>
+                            <p class="text-center">Redis permite a los usuarios almacenar claves que se corresponden con diversos tipos de datos. El tipo de datos fundamental es una cadena, que puede componerse de texto o datos binarios y tener un tamaño de hasta 512 MB. Redis también admite listas de cadenas en el orden en el que se han agregado, conjuntos de cadenas sin ordenar, conjuntos clasificados ordenados por puntuación, hashes que almacenan una lista de campos y valores, e HyperLogLogs que cuentan los elementos únicos de un conjunto de datos. Con Redis, se puede almacenar en la memoria prácticamente cualquier tipo de datos.</p>
+                            
+                            <h6 class="fw-bold text-center mt-2">Replicación y persistencia</h6>
+                            <p class="text-center">Redis utiliza una arquitectura maestro-esclavo y admite la replicación asíncrona mediante la que los datos se replican en numerosos servidores esclavos. De este modo, se logra una mejora en el desempeño de lectura (ya que las lecturas se pueden repartir entre servidores) y de recuperación cuando el servidor principal sufre un fallo.<br>
+                                Para proporcionar durabilidad, Redis admite las snapshots de un momento determinado (copiando el conjunto de datos de Redis en un disco) y la creación de un archivo de solo anexos (AOF) para almacenar cada uno de los cambios a los datos en un disco a medida que se producen. Ambos métodos facilitan la recuperación rápida de los datos de Redis si se produce un fallo.
+                            </p>
+
+                            <h6 class="fw-bold text-center mt-2">Compatibilidad con casi cualquier lenguaje</h6>
+                            <p class="text-center">Los que quieran desarrollar en Redis, pueden hacerlo con multitud de lenguajes de programación, como por ejemplo Java, Python, PHP, C, C++, C#, JavaScript, Node.js, Ruby, R, Go y muchos más.</p>
+
+                            <h6 class="fw-bold text-center mt-2">Versatilidad y facilidad de uso</h6>
+                            <p class="text-center">Redis incorpora varias herramientas que facilitan y aceleran el desarrollo y las operaciones, incluidas Pub/Sub, para publicar mensajes en canales, que se entregan a suscriptores, lo que es ideal para sistemas de chat y mensajería; las claves TTL, que indican un tiempo de vida determinado, tras el que se eliminan a sí mismas, lo que resulta útil para evitar llenar las bases de datos de datos no necesarios; los contadores atómicos, para garantizar que las condiciones de la carrera no creen resultados incoherentes; y Lua, un lenguaje de scripts ligero pero potente.
+                                Además, es muy fácil de utilizar, gracias a las diferentes herramientas que aceleran el desarrollo, como:<br>
+                                Pub/Sub, fantástico para sistemas de mensajería instantánea y que permite publicar mensajes en canales para entregar a los suscriptores.<br>
+                                Claves TTL, que se destruyen a sí mismas con el tiempo que le indiquemos y que son ideales para evitar datos innecesarios en nuestra base.<br>
+                                Contadores atómicos, que nos aseguran que no se creen resultados incoherentes.<br>
+                                Lua, un lenguaje de scripts liviano pero poderoso.<br>
+                            </p>
+
+
+                            <h3 class="fw-bold mt-4 text-center">Funcionamiento</h3>
+                            <p class="text-center">Redis almacena todos los datos en la memoria RAM, lo que le permite ofrecer un rendimiento muy rápido. Los datos se almacenan en estructuras de datos simples y eficientes, como cadenas, listas, conjuntos y diccionarios. Redis también admite transacciones atómicas, lo que significa que se pueden realizar varias operaciones en los datos de forma segura y consistente.<br>
+                                Redis es una base de datos distribuida, lo que significa que se puede ejecutar en varios servidores. Esto permite escalar Redis horizontalmente para manejar grandes cargas de trabajo. Redis también admite la replicación, lo que significa que los datos se pueden replicar en varios servidores para garantizar la alta disponibilidad.
+                            </p>
+
+                            <h6 class="fw-bold text-center">Almacenamiento de datos:</h6>
+                            <h6 class="fw-bold text-center">En memoria</h6>
+                            <p class="text-center">Redis almacena todos los datos en la memoria RAM, lo que proporciona un acceso extremadamente rápido a la información. Esto la diferencia de las bases de datos relacionales tradicionales que guardan datos en el disco duro, lo que puede generar latencias más altas.</p>
+
+                            <h6 class="fw-bold text-center">Estructura de datos eficientes</h6>
+                            <p class="text-center">Redis utiliza estructuras de datos simples y eficientes como cadenas, listas, conjuntos y diccionarios para organizar la información. Estas estructuras optimizan el acceso y la manipulación de datos, mejorando el rendimiento general.</p>
+
+                            <h6 class="fw-bold text-center">Arquitectura distribuida:</h6>
+                            <h6 class="fw-bold text-center">Escalabilidad horizontal</h6>
+                            <p class="text-center"> Redis se puede distribuir en múltiples servidores, permitiendo aumentar su capacidad de procesamiento y almacenamiento de datos de forma horizontal. Esto la hace ideal para aplicaciones que manejan grandes volúmenes de información o picos repentinos de tráfico.</p>
+
+                            <h6 class="fw-bold text-center">Alta disponibilidad</h6>
+                            <p class="text-center">Redis admite la replicación de datos entre servidores, asegurando que la información permanezca accesible incluso en caso de fallos en un nodo. Esta característica garantiza la continuidad del servicio y la protección contra la pérdida de datos.</p>
+
+                            <h6 class="fw-bold text-center">Modelo de datos clave-valor:</h6>
+                            <h6 class="fw-bold text-center">Asociación simple</h6>
+                            <p class="text-center">Redis asocia cada dato con una clave única, permitiendo un acceso rápido y directo a la información. La simplicidad del modelo clave-valor facilita la recuperación y manipulación de datos, optimizando el rendimiento de las consultas.</p>
+
+                            <h6 class="fw-bold text-center">Flexibilidad de datos</h6>
+                            <p class="text-center">Las claves en Redis pueden contener cadenas, listas, conjuntos y diccionarios, ofreciendo una gran flexibilidad para almacenar y organizar información diversa. Esta versatilidad permite adaptar la base de datos a las necesidades específicas de cada aplicación.</p>
+
+                            <h6 class="fw-bold text-center">Transacciones atómicas:</h6>
+                            <h6 class="fw-bold text-center">Operaciones consistentes</h6>
+                            <p class="text-center">Redis soporta transacciones atómicas, garantizando que un conjunto de operaciones se ejecute de forma completa o no se ejecute en absoluto. Esto previene la inconsistencia de datos y asegura la integridad de las transacciones.</p>
+
+                            <h6 class="fw-bold text-center">Aislamiento de Operaciones</h6>
+                            <p class="text-center">Las transacciones atómicas aíslan las operaciones entre sí, evitando conflictos y garantizando la ejecución segura y consistente, incluso en entornos con múltiples usuarios o procesos accediendo simultáneamente a la base de datos.</p>
+
+                            <h6 class="fw-bold text-center">Persistencia de datos:</h6>
+                            <h6 class="fw-bold text-center">Opcional</h6>
+                            <p class="text-center">Redis ofrece la opción de persistir los datos en el disco duro mediante la función AOF (Append-Only File) o RDB (Snapshotting). Esto permite recuperar la información en caso de un reinicio inesperado del servidor.</p>
+
+                            <h6 class="fw-bold text-center">Volatilidad</h6>
+                            <p class="text-center">Redis también puede configurarse para funcionar en modo volátil, donde los datos se almacenan únicamente en memoria y se pierden al reiniciar el servidor. Esta opción es útil para aplicaciones que no requieren persistencia de datos a largo plazo.</p>
+
+                            <h3 class="fw-bold mt-4 text-center">Desventajas</h3>
+                            <h6 class="fw-bold text-center">Limitaciones de almacenamiento:</h6>
+                            <h6 class="fw-bold text-center">Dependencia de la memoria RAM</h6>
+                            <p class="text-center">Al estar basado en memoria, Redis tiene un límite de capacidad definido por la cantidad de RAM disponible en el servidor. Si la cantidad de datos crece significativamente, puede ser necesario aumentar la memoria RAM o implementar técnicas de compresión de datos.</p>
+
+                            <h6 class="fw-bold text-center">Costos de infraestructura</h6>
+                            <p class="text-center">El uso de grandes cantidades de memoria RAM puede implicar costos de infraestructura más elevados, especialmente en entornos de producción con altos requerimientos de rendimiento.</p>
+
+                            <h6 class="fw-bold text-center">Naturaleza volátil:</h6>
+                            <h6 class="fw-bold text-center">Pérdida de datos</h6>
+                            <p class="text-center">Por defecto, Redis funciona en modo volátil, lo que significa que los datos se pierden al reiniciar el servidor. Si se requiere persistencia de datos a largo plazo, es necesario habilitar la funcionalidad de persistencia mediante AOF o RDB, lo que puede afectar el rendimiento.</p>
+                            
+                            <h6 class="fw-bold text-center">Riesgo de pérdida de información</h6>
+                            <p class="text-center">En caso de fallos en la alimentación o errores de software, los datos en memoria podrían perderse si no se ha configurado la persistencia adecuada.</p>
+
+                            <h6 class="fw-bold text-center">Soporte para consultas complejas:</h6>
+                            <h6 class="fw-bold text-center">Modelo simple</h6>
+                            <p class="text-center">Redis está diseñado para operaciones simples de lectura y escritura, y no es ideal para realizar consultas complejas que involucran múltiples conjuntos de datos o uniones. Para este tipo de tareas, se recomienda utilizar bases de datos relacionales o soluciones de análisis de datos especializadas.</p>
+
+                            <h6 class="fw-bold text-center">Limitaciones de filtrado</h6>
+                            <p class="text-center">Las capacidades de filtrado y búsqueda de Redis son básicas, lo que puede dificultar la recuperación de información específica de grandes conjuntos de datos.</p>
+
+                            <p class="text-center">La gestión de clusters de Redis distribuidos puede ser más compleja que la de bases de datos monolíticas (Una arquitectura monolítica es un modelo de desarrollo de software tradicional que utiliza un código base para realizar varias funciones empresariales. Todos los componentes de software de un sistema monolítico son interdependientes debido a los mecanismos de intercambio de datos dentro del sistema), requiriendo conocimientos técnicos y herramientas especializadas para garantizar el correcto funcionamiento y la alta disponibilidad.<br>
+                                En comparación con bases de datos relacionales como MySQL o PostgreSQL, Redis tiene un ecosistema de herramientas y bibliotecas de menor tamaño, lo que puede dificultar encontrar soluciones a problemas específicos o integrar la base de datos con otras aplicaciones.
+                            </p>
+
+
+                            <h3 class="fw-bold mt-3 text-center">Página Oficial de Documentación</h3>
+                            <div class="text-center"><img src="../img/paginaoficialredis.png" width="600" height="300"></div>
+                            <a href="https://redis.io/">Ir a la pagina oficial de Redis</a>
+                        </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
+
+
+
+

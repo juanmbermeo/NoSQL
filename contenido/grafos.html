@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Base de Datos NoSQL</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class='dashboard'>
+        <div class="dashboard-nav">
+            <header><a href="#!" class="menu-toggle"><i class="fas fa-bars"></i></a><a href="#" class="brand-logo text-decoration-none"><i class="fa-solid fa-database"></i> <span>BD NoSQL</span></a></header>
+            <nav class="dashboard-nav-list">
+                <a href="../index.html" class="dashboard-nav-item active text-decoration-none fw-bold"><i class="fas fa-home"></i> Home </a>
+                <a href="documentales.html" class="dashboard-nav-item text-decoration-none fw-bold"><i class="fa-solid fa-file-invoice"></i>Documentales</a>
+                <a href="clave.html" class="dashboard-nav-item text-decoration-none fw-bold"><i class="fa-solid fa-clone"></i>Clave-Valor</a>
+                <a href="colum.html" class="dashboard-nav-item text-decoration-none fw-bold"><i class="fa-solid fa-table-list"></i>Columnas</a>
+                <a href="#" class="dashboard-nav-item text-decoration-none fw-bold"><i class="fa-solid fa-diagram-project"></i>Grafos</a>
+            </nav>
+        </div>
+        <div class='dashboard-app'>
+            <header class='dashboard-toolbar'><a href="#!" class="menu-toggle text-decoration-none"><i class="fas fa-bars"></i></a></header>
+            <div class='dashboard-content'>
+                        <div class='card-header'>
+                            <h1 class="fw-bold">Neo4j</h1>
+                        </div>
+                        <div class='card-body'>
+                            <div class="row">
+                                <div class="col-md-6 text-center">
+                                    <h3 class="fw-bold">Concepto</h3>
+                                    <p>Una base de datos gráfica de Neo4j almacena nodos y relaciones en lugar de tablas o documentos. Los datos se almacenan de la misma manera que esbozarías ideas en una pizarra. Los datos se almacenan sin restringirlos a un modelo predefinido, lo que permite una forma muy flexible de pensar en ellos y utilizarlos. <br> <br>
+                                        Neo4j es una base de datos de grafos de alto rendimiento diseñada para almacenar, gestionar y consultar datos altamente relacionales. A diferencia de las bases de datos relacionales tradicionales que utilizan tablas y filas para representar datos, Neo4j utiliza un modelo de grafo en el que los datos se almacenan como nodos interconectados por relaciones.
+                                    </p>
+                                </div>
+                                <div class="col-md-6 text-center mt-3">
+                                    <img src="../img/neo4j2.png" width="450" height="300">
+                                </div>
+                            
+
+                            <h3 class="fw-bold mt-3 text-center">Características</h3>
+                            <h6 class="fw-bold text-center mt-2">Modelo de datos de grafo</h6>
+                            <p class="text-center">Se basa en un modelo de datos de grafo en lugar del modelo de datos tabular utilizado en las bases de datos relacionales tradicionales. Esto permite representar y modelar las relaciones entre los datos de manera más natural y eficiente.</p>
+
+                            <h6 class="fw-bold text-center">Nodos y relaciones</h6>
+                            <p class="text-center">En Neo4j, los datos se representan como nodos y relaciones. Los nodos representan entidades individuales y las relaciones representan las conexiones entre esos nodos. Cada nodo y relación puede tener propiedades que almacenan información adicional.</p>
+
+                            <h6 class="fw-bold text-center">Flexibilidad en las relaciones</h6>
+                            <p class="text-center">Permite representar relaciones directas, relaciones inversas y relaciones múltiples entre los nodos. Esto facilita la representación de estructuras de datos complejas y la captura de relaciones bidireccionales.</p>
+
+                            <h6 class="fw-bold text-center">Lenguaje de consulta Cypher</h6>
+                            <p class="text-center">Neo4j utiliza un lenguaje de consulta llamado Cypher. Cypher es un lenguaje expresivo y fácil de usar que permite realizar consultas y operaciones avanzadas en el grafo. Permite buscar patrones, realizar agregaciones, filtrar resultados y mucho más.</p>
+                            
+                            <h6 class="fw-bold text-center">Consultas y navegación eficiente</h6>
+                            <p class="text-center">Es conocido por su capacidad de realizar consultas rápidas y eficientes en grandes grafos. El diseño de almacenamiento optimizado y los algoritmos de consulta avanzados permiten una navegación rápida por el grafo y la recuperación de datos en tiempo real.</p>
+
+                            <h6 class="fw-bold text-center">Transacciones ASID</h6>
+                            <p class="text-center">Garantiza la integridad y consistencia de los datos mediante transacciones ACID. Esto significa que las operaciones en la base de datos son atómicas, consistentes, aisladas y duraderas, lo que garantiza la confiabilidad de los datos.</p>
+
+                            <h6 class="fw-bold text-center">Escalabilidad horizontal</h6>
+                            <p class="text-center">Es altamente escalable y puede manejar grandes volúmenes de datos. Puede escalar horizontalmente agregando más nodos al clúster de Neo4j, lo que permite distribuir la carga y aumentar el rendimiento.</p>
+
+                            <h6 class="fw-bold text-center">Indexación y búsqueda eficiente</h6>
+                            <p class="text-center">Proporciona capacidades de indexación y búsqueda que permiten buscar y recuperar datos de manera eficiente en el grafo. Los índices optimizados y las estructuras de almacenamiento especializadas facilitan la búsqueda y recuperación rápida de información.</p>
+
+                            <h6 class="fw-bold text-center">Integración con lenguajes de programación</h6>
+                            <p class="text-center">Ofrece controladores y bibliotecas para varios lenguajes de programación populares, lo que facilita la integración de la base de datos en aplicaciones existentes. Esto permite a los desarrolladores trabajar con Neo4j utilizando su lenguaje de programación preferido.</p>
+                            
+                            <h6 class="fw-bold text-center">Comunidad y soporte</h6>
+                            <p class="text-center">Cuenta con una comunidad activa de usuarios y desarrolladores que brindan soporte, recursos y contribuciones a la mejora continua de la base de datos. Además, Neo4j ofrece soporte comercial y servicios profesionales para aquellos que buscan asistencia adicional.</p>
+
+
+                            <h3 class="fw-bold mt-4 text-center">Funcionamiento</h3>
+                            <p class="text-center">Neo4j es una base de datos gráfica nativa , lo que significa que implementa un modelo gráfico real hasta el nivel de almacenamiento. Los datos se almacenan tal como se escriben en la pizarra, en lugar de como una "abstracción gráfica" sobre otra tecnología. Más allá del gráfico principal, Neo4j también proporciona: transacciones ACID, compatibilidad con clústeres y conmutación por error en tiempo de ejecución.<br><br>
+                                Neo4j se ofrece como un servicio de nube administrado a través de AuraDB . Pero también puede ejecutar Neo4j usted mismo con Community Edition o Enterprise Edition. Enterprise Edition incluye todas las características de Community Edition, además de requisitos empresariales adicionales, como copias de seguridad, agrupamiento y capacidades de conmutación por error.<br><br>
+                            </p>
+                                <h4 class="fw-bold text text-center">¿Qué hace que Neo4j sea el gráfico más fácil con el que trabajar?</h4>
+                                    <p class="text-center">Cypher, un lenguaje de consulta declarativo similar a SQL, pero optimizado para gráficos. Ahora lo utilizan otras bases de datos como SAP HANA Graph y Redis Graph a través del proyecto openCypher.<br>
+                                        Recorridos en tiempo constante en gráficos grandes, tanto en profundidad como en amplitud, gracias a la representación eficiente de nodos y relaciones. Permite la ampliación a miles de millones de nodos en hardware moderado.<br>
+                                        Esquema de gráfico de propiedades flexible que puede adaptarse con el tiempo, lo que hace posible materializar y agregar nuevas relaciones más adelante para acortar y acelerar los datos del dominio cuando las necesidades del negocio cambian.<br>
+                                        Controladores para lenguajes de programación populares, incluidos Java, JavaScript, .NET, Python y muchos más.<br><br>
+                                    </p>
+
+
+                                    <p class="text-center mt-3">Los nodos son las entidades en el gráfico.<br>
+                                        Los nodos se pueden etiquetar con etiquetas , que representan sus diferentes roles en su dominio (por ejemplo, Person).<br>
+                                        Los nodos pueden contener cualquier número de pares clave-valor o propiedades (por ejemplo, name).<br>
+                                        Las etiquetas de nodo también pueden adjuntar metadatos (como información de índice o restricción) a ciertos nodos.
+                                    </p>
+
+                                    <p class="text-center">Las relaciones proporcionan conexiones dirigidas y con nombre entre dos entidades de nodo (por ejemplo, Persona LOVES Persona ).<br>
+                                        Las relaciones siempre tienen una dirección, un tipo, un nodo inicial y un nodo final, y pueden tener propiedades, al igual que los nodos.<br>
+                                        Los nodos pueden tener cualquier número o tipo de relaciones sin sacrificar el rendimiento.<br>
+                                        Aunque las relaciones siempre están dirigidas , se pueden navegar eficientemente en cualquier dirección.
+                                    </p>
+                               
+
+                            <h3 class="fw-bold mt-4 text-center">Desventajas</h3>
+                            <h6 class="fw-bold text-center">Modelo de datos no estandarizado</h6>
+                            <p class="text-center">Aunque el modelo de datos de grafos es altamente efectivo para representar relaciones complejas, no es un estándar ampliamente adoptado en comparación con los modelos de datos más tradicionales como las bases de datos relacionales. Esto puede dificultar la integración con sistemas existentes o la colaboración con otras aplicaciones que utilizan modelos de datos diferentes.</p>
+
+                            <h6 class="fw-bold text-center">Cypher no es un lenguaje estandarizado</h6>
+                            <p class="text-center">Cypher es el lenguaje de consulta utilizado en Neo4j, pero no es un estándar de consulta ampliamente aceptado en la industria. Esto puede requerir que los desarrolladores aprendan un nuevo lenguaje y puede haber limitaciones en cuanto a la compatibilidad con otras herramientas y tecnologías.</p>
+
+                            <h6 class="fw-bold text-center">Replicación de grafos no de subgrafos</h6>
+                            <p class="text-center">En Neo4j, la replicación de datos se realiza a nivel de grafo completo y no a nivel de subgrafo. Esto significa que si se requiere la replicación de solo una parte del grafo, no es posible realizarlo de manera independiente. Esto puede afectar el rendimiento y la eficiencia en entornos donde solo se necesita replicar una porción del grafo.</p>
+
+
+                            <h3 class="fw-bold mt-3 text-center">Página Oficial de Documentación</h3>
+                            <div class="text-center"><img src="../img/paginaoficialneo4j.png" width="600" height="300"></div>
+                            <a href="https://neo4j.com/docs/">Ir a la pagina oficial de Neo4j</a>
+                        </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+</body>
+</html>
+
+
+
+
+
+    
+    
+        
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+  </body>

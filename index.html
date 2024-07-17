@@ -1,247 +1,77 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Dashboard</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="icon" href="img/icon-tienda-removebg-preview.png">
-    <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-  </head>
-  <body>
+    <title>Base de Datos NoSQL</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
 
-<div class="row">
-    <div class="col-3">
-        <div class="d-flex bg-body-tertiary">
-            <div id="sidebar-container" class="bg-primary">
-                <div class="logo">
-                    <h4 class="text-light fw-bold">Base de datos NoSQL</h4>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                      </button>
-                </div>
-                <ul class="sidebar-nav">
-                    <li class="sidebar-item text-light has-dropdown">
-                        <a href="#" class="sidebar-link text-light fw-bold">
-                            <span>Base de datos documentales</span>
-                        </a>
-                    </li>
-    
-    
-    
-                    <ul class="sidebar-nav">
-                        <li class="sidebar-item text-light has-dropdown">
-                            <a href="#" class="nav-link text-light has-dropdown collapsed" data-bs-toggle="collapse" data-bs-target="#bs-d" aria-expanded="false" aria-controls="bs-d">
-                                <img src="img/mongodb-icon.png" alt="" width="25" height="25">
-                                <span class="text-dark fw-bold">Mongodb</span>
-                            </a>
-
-                            <ul id="bs-d" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar-container">
-                                <li class="sidebar-item">
-                                    <a href="#" class="text-light nav-link fw-semibold has-dropdown collapsed" data-bs-toggle="collapse" data-bs-target="#bs-d" aria-expanded="false" aria-controls="bs-d">
-                                    <span class="text-light">Concepto</span>
-                                </a>
-                                </li>
-                                <li class="sidebar-item">
-                                    <a href="#" class="text-light nav-link fw-semibold has-dropdown collapsed" data-bs-toggle="collapse" data-bs-target="#bs-d" aria-expanded="false" aria-controls="bs-d">
-                                    <span class="text-light">Características</span>
-                                </a>
-                                </li>
-                                <li class="sidebar-item">
-                                    <a href="#" class="text-light nav-link fw-semibold has-dropdown collapsed" data-bs-toggle="collapse" data-bs-target="#bs-d" aria-expanded="false" aria-controls="bs-d">
-                                    <span class="text-light">Funcionamiento</span>
-                                </a>
-                                </li>
-                                <li class="sidebar-item">
-                                    <a href="#" class="text-light nav-link fw-semibold has-dropdown collapsed" data-bs-toggle="collapse" data-bs-target="#bs-d" aria-expanded="false" aria-controls="bs-d">
-                                    <span class="text-light">Desventajas</span>
-                                </a>
-                                </li>
-                                <li class="sidebar-item">
-                                    <a href="#" class="text-light nav-link fw-semibold has-dropdown collapsed" data-bs-toggle="collapse" data-bs-target="#bs-d" aria-expanded="false" aria-controls="bs-d">
-                                    <span class="text-light">Pagina oficial de documentación</span>
-                                </a>
-                                </li>
-                            </ul>
-                        </li>
-
-                            
-                        <li class="sidebar-item text-light has-dropdown">
-                            <a href="#" class="nav-link text-light has-dropdown collapsed" data-bs-toggle="collapse" data-bs-target="#bs-d2" aria-expanded="false" aria-controls="bs-d2">
-                                <img src="img/firestore-icon.png" alt="" width="23" height="25">
-                                <span class="text-dark fw-bold">Cloud Firestore</span>
-                            </a>
-
-
-                            <ul id="bs-d2" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar-container">
-                                <li class="sidebar-item">
-                                    <a href="#" class="text-light nav-link fw-semibold has-dropdown collapsed" data-bs-toggle="collapse" data-bs-target="#bs-d2" aria-expanded="false" aria-controls="bs-d2">
-                                    <span class="text-light">Concepto</span>
-                                </a>
-                                </li>
-                                <li class="sidebar-item">
-                                    <a href="#" class="text-light nav-link fw-semibold has-dropdown collapsed" data-bs-toggle="collapse" data-bs-target="#bs-d2" aria-expanded="false" aria-controls="bs-d2">
-                                    <span class="text-light">Características</span>
-                                </a>
-                                </li>
-                                <li class="sidebar-item">
-                                    <a href="#" class="text-light nav-link fw-semibold has-dropdown collapsed" data-bs-toggle="collapse" data-bs-target="#bs-d2" aria-expanded="false" aria-controls="bs-d2">
-                                    <span class="text-light">Funcionamiento</span>
-                                </a>
-                                </li>
-                                <li class="sidebar-item">
-                                    <a href="#" class="text-light nav-link fw-semibold has-dropdown collapsed" data-bs-toggle="collapse" data-bs-target="#bs-d2" aria-expanded="false" aria-controls="bs-d2">
-                                    <span class="text-light">Desventajas</span>
-                                </a>
-                                </li>
-                                <li class="sidebar-item">
-                                    <a href="#" class="text-light nav-link fw-semibold has-dropdown collapsed" data-bs-toggle="collapse" data-bs-target="#bs-d2" aria-expanded="false" aria-controls="bs-d2">
-                                    <span class="text-light">Pagina oficial de documentación</span>
-                                </a>
-                                </li>
-                            </ul>
-                        </li>
-    
-                    </ul>
-    
-    
-    
+    <!-- Navbar -->
+    <div class='dashboard'>
+        <div class="dashboard-nav">
+            <header><a href="#!" class="menu-toggle"><i class="fas fa-bars"></i></a><a href="#" class="brand-logo text-decoration-none"><i class="fa-solid fa-database"></i> <span>BD NoSQL</span></a></header>
+            <nav class="dashboard-nav-list">
+                <a href="#" class="dashboard-nav-item active text-decoration-none fw-bold"><i class="fas fa-home"></i> Home </a>
+                <a href="contenido/documentales.html" class="dashboard-nav-item text-decoration-none fw-bold"><i class="fa-solid fa-file-invoice"></i>Documentales</a>
+                <a href="contenido/clave.html" class="dashboard-nav-item text-decoration-none fw-bold"><i class="fa-solid fa-clone"></i>Clave-Valor</a>
+                <a href="contenido/colum.html" class="dashboard-nav-item text-decoration-none fw-bold"><i class="fa-solid fa-table-list"></i>Columnas</a>
+                <a href="contenido/grafos.html" class="dashboard-nav-item text-decoration-none fw-bold"><i class="fa-solid fa-diagram-project"></i>Grafos</a>
+            </nav>
+        </div>
+        <div class='dashboard-app'>
+            <header class='dashboard-toolbar'><a href="#!" class="menu-toggle text-decoration-none"><i class="fas fa-bars"></i></a></header>
+            <div class='dashboard-content'>
                     
-                    <li class="sidebar-item text-light has-dropdown">
-                        <a href="#" class="sidebar-link text-light fw-bold">
-                            <span>Base de datos clave-valor</span>
-                        </a>
-                    </li>
-                    <ul class="sidebar-nav">
-                        <li class="sidebar-item text-light has-dropdown">
-                            <a href="#" class="nav-link text-light has-dropdown collapsed" data-bs-toggle="collapse" data-bs-target="#bs-d3" aria-expanded="false" aria-controls="bs-d3">
-                                <img src="img/redis.svg" alt="" width="25">
-                                <span class="text-dark fw-bold">Redis</span>
-                            </a>
+                        <div class='card-header'>
+                            <h1 class="fw-bold">¿Qué es una base de datos NoSQL?</h1>
+                        </div>
+                        <div class='card-body'>
+                            <div class="row">
+                                <div class="col-md-6 mt-5">
+                                    <p>Las bases de datos NoSQL están diseñadas específicamente para modelos de datos específicos y almacenan los datos en esquemas flexibles que se escalan con facilidad para aplicaciones modernas. Las bases de datos NoSQL son ampliamente reconocidas porque son fáciles de desarrollar, por su funcionalidad y el rendimiento a escala. Esta página incluye recursos que lo ayudan a comprender mejor las bases de datos NoSQL y comenzar a usarlas.<br>
+                                        Las bases de datos NoSQL son un tipo de base de datos no relacional que almacena datos de forma flexible y escalable. A diferencia de las bases de datos relacionales tradicionales, que utilizan un modelo de tablas y filas, las bases de datos NoSQL pueden almacenar datos en una variedad de formatos, incluyendo documentos, JSON, grafos y clave-valor.<br>
+                                    </p>
+                                </div>
+                                <div class="col-md-6 text-center mt-3">
+                                    <img src="img/BD-NoSQL.png" width="400" height="400">
+                                </div>
+                            </div>
 
-                            <ul id="bs-d3" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar-container">
-                                <li class="sidebar-item">
-                                    <a href="#" class="text-light nav-link fw-semibold has-dropdown collapsed" data-bs-toggle="collapse" data-bs-target="#bs-d3" aria-expanded="false" aria-controls="bs-d3">
-                                    <span class="text-light">Concepto</span>
-                                </a>
-                                </li>
-                                <li class="sidebar-item">
-                                    <a href="#" class="text-light nav-link fw-semibold has-dropdown collapsed" data-bs-toggle="collapse" data-bs-target="#bs-d3" aria-expanded="false" aria-controls="bs-d3">
-                                    <span class="text-light">Características</span>
-                                </a>
-                                </li>
-                                <li class="sidebar-item">
-                                    <a href="#" class="text-light nav-link fw-semibold has-dropdown collapsed" data-bs-toggle="collapse" data-bs-target="#bs-d3" aria-expanded="false" aria-controls="bs-d3">
-                                    <span class="text-light">Funcionamiento</span>
-                                </a>
-                                </li>
-                                <li class="sidebar-item">
-                                    <a href="#" class="text-light nav-link fw-semibold has-dropdown collapsed" data-bs-toggle="collapse" data-bs-target="#bs-d3" aria-expanded="false" aria-controls="bs-d3">
-                                    <span class="text-light">Desventajas</span>
-                                </a>
-                                </li>
-                                <li class="sidebar-item">
-                                    <a href="#" class="text-light nav-link fw-semibold has-dropdown collapsed" data-bs-toggle="collapse" data-bs-target="#bs-d3" aria-expanded="false" aria-controls="bs-d3">
-                                    <span class="text-light">Pagina oficial de documentación</span>
-                                </a>
-                                </li>
-                            </ul>
-                        </li>
-                </ul>
 
-                <li class="sidebar-item text-light has-dropdown">
-                    <a href="#" class="sidebar-link text-light fw-bold">
-                        <span>Base de datos Orientadas a Columnas</span>
-                    </a>
-                </li>
-                <ul class="sidebar-nav">
-                    <li class="sidebar-item text-light has-dropdown">
-                        <a href="#" class="nav-link text-light has-dropdown collapsed" data-bs-toggle="collapse" data-bs-target="#bs-d4" aria-expanded="false" aria-controls="bs-d4">
-                            <img src="img/cassandra.svg" alt="" width="25">
-                            <span class="text-dark fw-bold">Cassandra</span>
-                        </a>
+                            <h3 class="fw-bold mt-4 text-center">¿Cuáles son las ventajas de las bases de datos NoSQL?</h3>
+                            <p>Las aplicaciones modernas se enfrentan a varios desafíos que las bases de datos NoSQL pueden resolver. Por ejemplo, las aplicaciones procesan un gran volumen de datos de fuentes dispares, como las redes sociales, los sensores inteligentes y las bases de datos de terceros. Todos estos datos dispares no encajan perfectamente en el modelo relacional. La aplicación de estructuras tabulares puede provocar redundancia, duplicación de datos y problemas de rendimiento a escala.<br>
+                                Las bases de datos NoSQL están diseñadas específicamente para modelos de datos no relacionales y tienen esquemas flexibles para crear aplicaciones modernas. Son ampliamente reconocidas por su facilidad de desarrollo, su funcionalidad y el rendimiento a escala. <br>
+                            </p>
 
-                        <ul id="bs-d4" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar-container">
-                            <li class="sidebar-item">
-                                <a href="#" class="text-light nav-link fw-semibold has-dropdown collapsed" data-bs-toggle="collapse" data-bs-target="#bs-d4" aria-expanded="false" aria-controls="bs-d4">
-                                <span class="text-light">Concepto</span>
-                            </a>
-                            </li>
-                            <li class="sidebar-item">
-                                <a href="#" class="text-light nav-link fw-semibold has-dropdown collapsed" data-bs-toggle="collapse" data-bs-target="#bs-d4" aria-expanded="false" aria-controls="bs-d4">
-                                <span class="text-light">Características</span>
-                            </a>
-                            </li>
-                            <li class="sidebar-item">
-                                <a href="#" class="text-light nav-link fw-semibold has-dropdown collapsed" data-bs-toggle="collapse" data-bs-target="#bs-d4" aria-expanded="false" aria-controls="bs-d4">
-                                <span class="text-light">Funcionamiento</span>
-                            </a>
-                            </li>
-                            <li class="sidebar-item">
-                                <a href="#" class="text-light nav-link fw-semibold has-dropdown collapsed" data-bs-toggle="collapse" data-bs-target="#bs-d4" aria-expanded="false" aria-controls="bs-d4">
-                                <span class="text-light">Desventajas</span>
-                            </a>
-                            </li>
-                            <li class="sidebar-item">
-                                <a href="#" class="text-light nav-link fw-semibold has-dropdown collapsed" data-bs-toggle="collapse" data-bs-target="#bs-d4" aria-expanded="false" aria-controls="bs-d4">
-                                <span class="text-light">Pagina oficial de documentación</span>
-                            </a>
-                            </li>
-                        </ul>
-                    </li>
-            </ul>
+                            <h6 class="fw-bold">Flexibilidad</h6>
+                            <p>Las bases de datos NoSQL generalmente ofrecen esquemas flexibles que permiten un desarrollo más rápido y más iterativo. El modelo de datos flexible hace que las bases de datos NoSQL sean ideales para datos semiestructurados y no estructurados.</p>
 
-            <li class="sidebar-item text-light has-dropdown">
-                <a href="#" class="sidebar-link text-light fw-bold">
-                    <span>Base de datos Orientadas a Grafos</span>
-                </a>
-            </li>
-            <ul class="sidebar-nav">
-                <li class="sidebar-item text-light has-dropdown">
-                    <a href="#" class="nav-link text-light has-dropdown collapsed" data-bs-toggle="collapse" data-bs-target="#bs-d5" aria-expanded="false" aria-controls="bs-d5">
-                        <img src="img/neoj.svg" alt="" width="25">
-                        <span class="text-dark fw-bold">Neo4j</span>
-                    </a>
+                            <h6 class="fw-bold">Escalabilidad</h6>
+                            <p>Las bases de datos NoSQL generalmente están diseñadas para escalar horizontalmente usando clústeres distribuidos de hardware, en lugar de escalar añadiendo servidores caros y sólidos. Algunos proveedores de la nube manejan estas operaciones en segundo plano, como un servicio completamente administrado.</p>
 
-                    <ul id="bs-d5" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar-container">
-                        <li class="sidebar-item">
-                            <a href="#" class="text-light nav-link fw-semibold has-dropdown collapsed" data-bs-toggle="collapse" data-bs-target="#bs-d5" aria-expanded="false" aria-controls="bs-d5">
-                            <span class="text-light">Concepto</span>
-                        </a>
-                        </li>
-                        <li class="sidebar-item">
-                            <a href="#" class="text-light nav-link fw-semibold has-dropdown collapsed" data-bs-toggle="collapse" data-bs-target="#bs-d5" aria-expanded="false" aria-controls="bs-d5">
-                            <span class="text-light">Características</span>
-                        </a>
-                        </li>
-                        <li class="sidebar-item">
-                            <a href="#" class="text-light nav-link fw-semibold has-dropdown collapsed" data-bs-toggle="collapse" data-bs-target="#bs-d5" aria-expanded="false" aria-controls="bs-d5">
-                            <span class="text-light">Funcionamiento</span>
-                        </a>
-                        </li>
-                        <li class="sidebar-item">
-                            <a href="#" class="text-light nav-link fw-semibold has-dropdown collapsed" data-bs-toggle="collapse" data-bs-target="#bs-d5" aria-expanded="false" aria-controls="bs-d5">
-                            <span class="text-light">Desventajas</span>
-                        </a>
-                        </li>
-                        <li class="sidebar-item">
-                            <a href="#" class="text-light nav-link fw-semibold has-dropdown collapsed" data-bs-toggle="collapse" data-bs-target="#bs-d5" aria-expanded="false" aria-controls="bs-d5">
-                            <span class="text-light">Pagina oficial de documentación</span>
-                        </a>
-                        </li>
-                    </ul>
-                </li>
-        </ul>
+                            <h6 class="fw-bold">Alto rendimiento</h6>
+                            <p>Las bases de datos NoSQL están optimizadas para modelos de datos y patrones de acceso específicos. Esto permite un mayor rendimiento que si intentara lograr una funcionalidad similar con bases de datos relacionales.</p>
+
+                            <h6 class="fw-bold">Altamente funcional</h6>
+                            <p>Las bases de datos NoSQL proporcionan API altamente funcionales y tipos de datos que están diseñados específicamente para cada uno de sus respectivos modelos de datos.</p>
+                            
+
+                            <h3 class="fw-bold mt-4 text-center">¿Cómo funcionan las bases de datos NoSQL?</h3>
+                            <p>Las bases de datos NoSQL utilizan una variedad de modelos de datos para acceder y administrar datos. Estos tipos de bases de datos están optimizados específicamente para aplicaciones que requieren modelos de datos flexibles, grandes volúmenes de datos y baja latencia, lo que se logra mediante la flexibilización de algunas de las restricciones de coherencia de datos en bases de datos relacionales. Existen diferencias en la implementación según el modelo de datos. Sin embargo, muchas bases de datos NoSQL utilizan Javascript Object Notation (JSON), un formato de intercambio de datos abierto que representa los datos como una colección de pares nombre-valor.</p>
+                        </div>
+                    
             </div>
         </div>
     </div>
-</div>   
     
-    
-        
-
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-  </body>
+</body>
+</html>
+
+
+
+
